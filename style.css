@@ -12,6 +12,11 @@ html, body {
   width: 100%;
   background-color: black;
   overflow: hidden;
+  max-height: 120px;
+}
+
+.view {
+  height: calc(100vh - 120px); 
 }
 
 .header img {
