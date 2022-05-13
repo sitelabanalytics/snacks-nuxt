@@ -15,9 +15,6 @@ html, body {
   max-height: 120px;
 }
 
-.view {
-  height: calc(100vh - 120px); 
-}
 
 .header img {
   justify-content: flex-start;
@@ -139,8 +136,8 @@ html, body {
   }
 }
 
-.carousel { 
-  height: calc(100vh-120px); 
+.main-carousel { 
+  max-height: 750px; 
 }
 
 .carousel-cell { 
