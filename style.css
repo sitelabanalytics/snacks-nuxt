@@ -140,12 +140,11 @@ html, body {
 }
 
 .carousel { 
-  max-height: calc(100vh-120px); min-height: 300px; 
+  height: calc(100vh-120px); 
 }
 
 .carousel-cell { 
   width: 66%;
-  height: 300px;
   margin-right: 10px;
   background: #8C8;
   border-radius: 5px;
