@@ -134,5 +134,5 @@ html, body {
   }
 }
 
-.main-carousel { max-height: 78vh; min-height: 300px; }
-.carousel-cell img { max-height: 650px; max-width: 65%; }
+.main-carousel { max-height: calc(100vh-120px); min-height: 300px; }
+.carousel-cell img { max-height: 650px; }
