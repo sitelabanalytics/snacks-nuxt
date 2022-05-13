@@ -176,13 +176,14 @@
       </div>
     </div>
   </body>
-  <script src="js/index.js"></script>
+
   <script type="text/javascript">
   var elem = document.querySelector('.main-carousel');
   var flkty = new Flickity( elem, {
   // options
   imagesLoaded: true,
   bgLazyLoad: true,
+  bgLazyLoad: 1,
   cellAlign: 'left',
   contain: true,
   freeScroll: true,
@@ -193,5 +194,7 @@
   friction: 0.15 
   });
   </script>
+	
+  <script src="js/index.js"></script>
 
 </html>
