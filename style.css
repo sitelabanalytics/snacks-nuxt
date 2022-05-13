@@ -146,7 +146,7 @@ html, body {
 .carousel-cell { 
   width: 66%;
   margin-right: 10px;
-  background: #8C8;
+  background: #f2f2f2;
   border-radius: 5px;
   background-position: center center;
   background-size: cover; 
