@@ -20,7 +20,7 @@
 		<div class="flex flex-row items-center flex-shrink-0 text-white mr-6">
 			<a class="text-white no-underline hover:text-white hover:no-underline" href="#">
 				<div class="navbar__item inline-block py-4">
-					<a href="#" class="navbar__link" @click="isOpen = false">
+					<a href="/" class="navbar__link" @click="isOpen = false">
 						<span class="navbar__link-showcase">
 							<span class="navbar__link-text text-2xl font-extrabold" data-after="HOME">
 								SNACKS FOR YOUR EYES
@@ -60,7 +60,7 @@
         x-show.transition="true">
 			<ul class="navbar__list" class="justify-end">
 				<li class="navbar__item">
-					<a href="#" class="navbar__link" @click="isOpen = false">
+					<a href="/about" class="navbar__link" @click="isOpen = false">
 						<span class="navbar__link-showcase">
 							<span class="navbar__link-text" data-after="ABOUT">
 								ABOUT
@@ -69,7 +69,7 @@
 					</a>
 				</li>
 				<li class="navbar__item">
-					<a href="#" class="navbar__link" @click="isOpen = false">
+					<a href="/gallery" class="navbar__link" @click="isOpen = false">
 						<span class="navbar__link-showcase">
 							<span class="navbar__link-text" data-after="GALLERY">
 								GALLERY
@@ -78,16 +78,7 @@
 						
 					</a>
 				</li>
-				<li class="navbar__item">
-					<a href="#" class="navbar__link" @click="isOpen = false">
-						<span class="navbar__link-showcase">
-							<span class="navbar__link-text" data-after="CONTACT">
-								CONTACT
-							</span>
-						</span>
-					</a>
-				</li>
-				<button class="inline-block mr-6 px-8 py-4 bg-blue-500 hover:bg-blue-700 rounded-2xl">
+				<button class="inline-block mr-6 px-8 py-4 text-black bg-gray-100 hover:bg-gray-300 rounded-2xl">
 					<li class="navbar__item">
 						<a href="#" class="navbar__link" @click="isOpen = false">
 							<span class="navbar__link-showcase">
