@@ -5,30 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snacks for your eyes | Gold Coast Photography</title>
     <link rel="stylesheet" href="./sass/styles.scss" />
+    <link rel="stylesheet" href="style.css">
+	  <script src="https://cdn.tailwindcss.com"></script>
+	  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
   </head>
   <body class="loading">
-    <!-- Header -->
-    <header>
-      <div class="header-inner">
-        <div class="header-inner-col left">
-          <div class="header-inner-logo">
-            <h2>Snacks for your eyes</h2>
-          </div>
-        </div>
-        <div class="header-inner-col right">
-          <div class="header-inner-nav">
-            <span class="header-inner-nav-link">gallery</span>
-            <div class="header-inner-nav-menu">
-              <span class="header-inner-nav-link">menu</span>
-              <div class="header-inner-nav-menu-hamburger">
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+<!-- Header -->
+<div id="header" class="py-16">
+	<nav class="navbar flex items-center justify-between flex-wrap py-6 px-4 fixed w-full z-10 top-0"
+	x-data="{ isOpen: false }"
+	@keydown.escape="isOpen = false"
+	:class="{ 'shadow-lg bg-indigo-900' : isOpen , 'bg-gray-800' : !isOpen}">
+		<!--Logo etc-->
+		<div class="flex flex-row items-center flex-shrink-0 text-white mr-6">
+			<a class="text-white no-underline hover:text-white hover:no-underline" href="#">
+				<div class="navbar__item inline-block py-4">
+					<a href="#" class="navbar__link" @click="isOpen = false">
+						<span class="navbar__link-showcase">
+							<span class="navbar__link-text text-2xl font-extrabold" data-after="HOME">
+								SNACKS FOR YOUR EYES
+							</span>
+						</span>
+					</a>
+				</div>
+			</a>
+		</div>
+	
+		<!--Toggle button (hidden on large screens)-->
+		<button
+        @click="isOpen = !isOpen"
+        type="button"
+        class="block lg:hidden px-2 text-gray-500 hover:text-white focus:outline-none focus:text-white"
+        :class="{ 'transition transform-180': isOpen }">
+			<svg
+			class="h-6 w-6 fill-current"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 24 24">
+			<path
+				x-show="isOpen"
+				fill-rule="evenodd"
+				clip-rule="evenodd"
+				d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
+			<path
+				x-show="!isOpen"
+				fill-rule="evenodd"
+				d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+			</svg>
+      	</button>
+
+		<!--Menu-->
+		<div class="w-full lg:flex lg:items-center lg:w-auto"
+        :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }"
+        @click.away="isOpen = false"
+        x-show.transition="true">
+			<ul class="navbar__list" class="justify-end">
+				<li class="navbar__item">
+					<a href="#" class="navbar__link" @click="isOpen = false">
+						<span class="navbar__link-showcase">
+							<span class="navbar__link-text" data-after="ABOUT">
+								ABOUT
+							</span>
+						</span>
+					</a>
+				</li>
+				<li class="navbar__item">
+					<a href="#" class="navbar__link" @click="isOpen = false">
+						<span class="navbar__link-showcase">
+							<span class="navbar__link-text" data-after="GALLERY">
+								GALLERY
+							</span>
+						</span>
+						
+					</a>
+				</li>
+				<li class="navbar__item">
+					<a href="#" class="navbar__link" @click="isOpen = false">
+						<span class="navbar__link-showcase">
+							<span class="navbar__link-text" data-after="CONTACT">
+								CONTACT
+							</span>
+						</span>
+					</a>
+				</li>
+				<button class="inline-block mr-6 px-8 py-4 bg-blue-500 hover:bg-blue-700 rounded-2xl">
+					<li class="navbar__item">
+						<a href="#" class="navbar__link" @click="isOpen = false">
+							<span class="navbar__link-showcase">
+								<span class="navbar__link-text" data-after="BOOK">
+									BOOK
+								</span>
+							</span>
+						</a>
+					</li>
+				</button>
+			</ul>
+		</div>
+	</nav>
+</div>
 
     <section class="hero">
       <div class="container">
