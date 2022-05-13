@@ -134,5 +134,16 @@ html, body {
   }
 }
 
-.main-carousel { max-height: calc(100vh-120px); min-height: 300px; }
-.carousel-cell img { max-height: 650px; }
+.carousel { 
+  max-height: calc(100vh-120px); min-height: 300px; 
+}
+
+.carousel-cell { 
+  width: 66%;
+  height: 300px;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  background-position: center center;
+  background-size: cover; 
+}
