@@ -51,6 +51,7 @@
           z-index: 11;
           position: relative;
           display: flex;
+          flex-direction: column;
           .hero-inner-link-item {
             .hero-inner-link-item-padding {
               position: relative;
