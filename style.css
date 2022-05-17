@@ -20,8 +20,8 @@ html, body {
   justify-content: flex-start;
 }
 
-.view { 
-  margin-top: 118px;
+#view { 
+  margin: 118px 0;
 }
 
 
