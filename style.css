@@ -12,13 +12,19 @@ html, body {
   width: 100%;
   background-color: black;
   overflow: hidden;
-  max-height: 120px;
+  max-height: 118px;
 }
 
 
 .header img {
   justify-content: flex-start;
 }
+
+.view { 
+  margin-top: 118px;
+}
+
+
 
 #highlightText {
   display: block;
@@ -137,14 +143,15 @@ html, body {
 }
 
 .main-carousel { 
-  max-height: 750px; 
+  max-height: 65vh;
+  height: auto;
+  min-height: 320px; 
 }
 
 .carousel-cell { 
   width: 66%;
   margin-right: 10px;
   background: #f2f2f2;
-  border-radius: 5px;
   background-position: center center;
   background-size: cover; 
 }
