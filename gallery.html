@@ -92,7 +92,7 @@
 
 <section id="view" class="hero bg-gray-800">
  
-    <div id="" class="main-carousel">
+    <div id="" class="main-carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "freeScroll": true, "lazyLoad": true, "autoPlay": 3000 }'>
       <!-- slider content start - add more image slides below -->
       <div class="carousel-cell">
         <img class="" src="img/landscape/1.jpg" alt="" />
@@ -174,20 +174,5 @@
     </div>
   </body>
   <script src="js/index.js"></script>
-  <script>
-  var elem = document.querySelector('.main-carousel');
-  var flkty = new Flickity( elem, {
-  // options
-  cellAlign: 'left',
-  contain: true,
-  freeScroll: true,
-  wrapAround: true,
-  autoPlay: true,
-  pauseAutoPlayOnHover: false,
-  lazyLoad: 3,
-  selectedAttraction: 0.01,
-  friction: 0.15 
-  });
-  </script>
 
 </html>
