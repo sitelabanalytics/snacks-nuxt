@@ -142,19 +142,16 @@ html, body {
   }
 }
 
-.main-carousel { 
-  max-height: 50vh;
-  height: auto;
-  min-height: 320px; 
+.carousel img {
+  display: block;
+  height: 300px;
+  max-height: 85vh;
 }
 
-.carousel-cell { 
-  width: 66%;
-  max-height: 50vh;
-  margin-right: 10px;
-  background-position: center center;
-  background-size: cover; 
-}
+@media screen and ( min-width: 768px ) {
+  .carousel img {
+    height: 450px;
+  }
 
 .flickity-viewport {
 	height: 100%;	
