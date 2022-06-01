@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel index.html gallery.html",
-    "build": "parcel build index.html gallery.html"
+    "dev": "parcel index.html gallery.html about.html contact.html",
+    "build": "parcel build index.html gallery.html about.html contact.html"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
