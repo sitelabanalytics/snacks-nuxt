@@ -167,3 +167,22 @@ html, body {
     height: 250px;
   }
 }
+
+// Page Dots
+.flickity-page-dots {
+  bottom: 0px;
+}
+.flickity-page-dots .dot {
+  width: 3%;
+  min-width: 5px;
+  height: 15px;
+  opacity: 1;
+  background: transparent;
+  border-top: 3px solid #fff;
+  opacity: 0.3;
+  border-radius: 0;
+  margin: 0;
+}
+.flickity-page-dots .dot.is-selected {
+  opacity: 1;
+}
