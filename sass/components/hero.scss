@@ -25,8 +25,9 @@
     .hero-inner {
       height: 90vh;
       display: flex;
-      justify-content: center;
-
+      justify-self: center;
+      align-items: center;
+      
       .hero-inner-col {
         &.left {
           display: none;
@@ -63,6 +64,7 @@
               }
             }
             a {
+              padding: 12px 22px;
               display: inline-block;
               position: relative;
               overflow: hidden;
