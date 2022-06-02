@@ -144,15 +144,11 @@ html, body {
 
 .carousel img {
   display: block;
-  height: 300px;
-  max-height: 85vh;
+  height: 200px;
 }
 
 @media screen and ( min-width: 768px ) {
   .carousel img {
-    height: 450px;
+    height: 400px;
   }
-}
-.flickity-viewport {
-	height: 100%;	
 }
