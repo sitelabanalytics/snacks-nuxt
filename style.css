@@ -142,13 +142,13 @@ html, body {
   }
 }
 
-.carousel img {
+.main-carousel img {
   display: block;
-  height: 200px !important;
+  height: 350px;
 }
 
 @media screen and ( min-width: 768px ) {
-  .carousel img {
-    height: 400px !important;
+  .main-carousel img {
+    height: 400px;
   }
 }
