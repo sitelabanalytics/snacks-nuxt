@@ -1,7 +1,10 @@
 .hero {
   background: #000;
   .container {
-      padding: 0 40px;
+      padding: 0 10px;
+      @media (min-width: 568px) {
+              padding: 0 40px;
+          }
     }
     .hero-works {
       height: 45vh !important;
@@ -56,6 +59,11 @@
               font-size: 28px;
             }
           }
+        }
+        .hero-inner-grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
         }
         .hero-inner-links {
           z-index: 11;
