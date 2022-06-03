@@ -6,21 +6,24 @@
     .hero-works {
       height: 45vh !important;
       span {
-        font-size: 4rem !important;
+        font-size: 1rem !important;
+        @media (min-width: 768px) {
+              font-size: 1.5rem;
+              line-height: 3rem;
+              width: 70%;
+          }
+          @media (min-width: 1199px) {
+              font-size: 2rem;
+              line-height: 3.5rem;
+            }
+          @media (min-width: 1440px) {
+              font-size: 2.2rem;
+              line-height: 4rem;
+          }
       }
       a {
-        padding: 12px 6% !important;
+        max-width: 350px;
       }
-      &:first-child {
-              a {
-                padding-left: 0;
-              }
-            }
-            &:last-child {
-              a {
-                padding-right: 0;
-              }
-            }
     }
     .hero-inner {
       height: 65vh;
@@ -39,7 +42,6 @@
           position: relative;
           h1 {
             margin: 0;
-
             font-weight: 400;
             @media (min-width: 1800px) {
               font-size: 28px;
@@ -109,16 +111,17 @@
       .hero-inner-footer-text {
         p {
           font-size: 1.2rem;
-          width: 80%;
+          width: 90%;
           line-height: 2.4rem;
           @media (min-width: 768px) {
               font-size: 1.5rem;
               line-height: 3rem;
-              width: 70%;
+              width: 80%;
           }
           @media (min-width: 1199px) {
               font-size: 2rem;
               line-height: 3.5rem;
+              width: 70%;
             }
           @media (min-width: 1440px) {
               font-size: 2.2rem;
