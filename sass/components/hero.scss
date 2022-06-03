@@ -45,15 +45,20 @@
               }
             }
             a {
-              padding: 12px 22px;
-                @media (min-width: 568px) {
-                padding: 12px 9px;
+              padding: 12px 9px;
+              color: #fff;
+                @media (min-width: 768px) {
+                padding: 12px 14px;
+                color: transparent;
+                }
+                @media (min-width: 1440px) {
+                padding: 12px 22px;
                 }
               display: inline-block;
               position: relative;
               overflow: hidden;
               text-decoration: none;
-              color: transparent;
+              
               transition: color 0.3s, -webkit-text-stroke 0.3s;
               -webkit-text-stroke: 1px #fff;
               &:hover {
