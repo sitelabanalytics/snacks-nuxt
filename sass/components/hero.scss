@@ -7,7 +7,7 @@
           }
     }
     .hero-works {
-      height: 45vh !important;
+      margin-top: 140px;
       span {
         font-size: 1rem !important;
         @media (min-width: 768px) {
@@ -126,6 +126,12 @@
     }
     .hero-inner-footer {
       .hero-inner-footer-text {
+        .form-container {
+          display: flex;
+          @media (min-width: 768px) {
+              flex-direction: row;
+          }
+        }
         p {
           font-size: 1.2rem;
           width: 90%;
