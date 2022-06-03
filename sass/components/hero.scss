@@ -29,15 +29,18 @@
           }
       }
       a {
-        width: auto;
-        @media (min-width: 768px) {
-              min-width: 240px;
+        width: 30%;
+        @media (min-width: 968px) {
+              min-width: 300px;
           }
         @media (min-width: 1199px) {
-              min-width: 350px;
+              min-width: 450px;
           }
         @media (min-width: 1440px) {
-              min-width: 450px;
+              min-width: 600px;
+          }
+        @media (min-width: 1980px) {
+              min-width: 700px;
           }
       }
     }
