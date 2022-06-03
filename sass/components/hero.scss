@@ -147,9 +147,18 @@
             background-color: black;
           }
           textarea {
-            min-height: 200px;
-            font-size: 14pt;
+            min-height: 150px;
+            min-width: 300px;
             background-color: black;
+            font-size: 16pt;
+            line-height: 185%;
+          }
+          button {
+            padding: 11px 16px;
+            background-color: #1a202c;
+            font-size: 16pt;
+            font-weight: 600;
+            border-radius: 6px;
           }
         }
         p {
