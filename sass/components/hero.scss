@@ -131,6 +131,20 @@
           @media (min-width: 768px) {
               flex-direction: row;
           }
+          .form-element {
+            margin: 0px 10px;
+            width: 100%;
+            @media (min-width: 768px) {
+              flex-direction: row;
+              margin: 0px 40px;
+            }
+          }
+          input { 
+            background-color: black;
+          }
+          textarea {
+            min-height: 200px;
+          }
         }
         p {
           font-size: 1.2rem;
