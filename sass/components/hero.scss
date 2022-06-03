@@ -17,12 +17,18 @@
               line-height: 3.5rem;
             }
           @media (min-width: 1440px) {
-              font-size: 4.5rem !important;
+              font-size: 4vw !important;
               line-height: 4rem;
           }
       }
       a {
-        max-width: 400px;
+        max-width: 350px;
+        @media (min-width: 768px) {
+              max-width: 400px;
+          }
+        @media (min-width: 1199px) {
+              max-width: 450px;
+          }
       }
     }
     .hero-inner {
