@@ -4,7 +4,10 @@
       padding: 0 40px;
     }
     .hero-works {
-      height: 45vh;
+      height: 45vh !important;
+      span {
+        font-size: 1.5rem !important;
+      }
     }
     .hero-inner {
       height: 65vh;
