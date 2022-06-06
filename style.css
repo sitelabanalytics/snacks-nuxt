@@ -14,7 +14,7 @@ html, body {
 
 .header {
   width: 100%;
-  background-color: #fff;
+  background-color: none;
   overflow: hidden;
   max-height: 118px;
 }
