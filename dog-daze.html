@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snacks for your eyes | Gold Coast Photography</title>
+    <link rel="stylesheet" href="./sass/styles.scss" />
+    <link rel="stylesheet" href="style.css">
+	  <script src="https://cdn.tailwindcss.com"></script>
+	  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  </head>
+  <body class="loading">
+<!-- Header -->
+<div id="header" class="">
+	<nav class="navbar flex items-center justify-between flex-wrap py-6 px-4 fixed w-full top-0"
+	x-data="{ isOpen: false }"
+	@keydown.escape="isOpen = false"
+	:class="{ 'shadow-lg bg-gray-100' : isOpen , 'bg-gray-200' : !isOpen}">
+		<!--Logo etc-->
+		<div class="flex flex-row items-center flex-shrink-0 text-white mr-6">
+			<a class="text-white no-underline hover:text-white hover:no-underline" href="#">
+				<div class="navbar__item inline-block py-4">
+					<a href="https://snacksforyoureyes.netlify.app/" class="navbar__link" @click="isOpen = false">
+						<span class="navbar__link-showcase">
+							<span class="navbar__link-text text-2xl font-extrabold" data-after="HOME">
+								SNACKS FOR YOUR EYES
+							</span>
+						</span>
+					</a>
+				</div>
+			</a>
+		</div>
+	
+		<!--Toggle button (hidden on large screens)-->
+		<button
+        @click="isOpen = !isOpen"
+        type="button"
+        class="block lg:hidden px-2 text-gray-800 hover:text-white focus:outline-none focus:text-white"
+        :class="{ 'transition transform-180': isOpen }">
+			<svg
+			class="h-6 w-6 fill-current"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 24 24">
+			<path
+				x-show="isOpen"
+				fill-rule="evenodd"
+				clip-rule="evenodd"
+				d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
+			<path
+				x-show="!isOpen"
+				fill-rule="evenodd"
+				d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+			</svg>
+      	</button>
+
+		<!--Menu-->
+		<div class="w-full lg:flex lg:items-center lg:w-auto"
+        :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }"
+        @click.away="isOpen = false"
+        x-show.transition="true">
+			<ul class="navbar__list" class="justify-end">
+				<li class="navbar__item">
+					<a href="https://snacksforyoureyes.netlify.app/about" class="navbar__link" @click="isOpen = false">
+						<span class="navbar__link-showcase">
+							<span class="navbar__link-text" data-after="ABOUT">
+								ABOUT
+							</span>
+						</span>
+					</a>
+				</li>
+				<li class="navbar__item">
+					<a href="https://snacksforyoureyes.netlify.app/gallery" class="navbar__link" @click="isOpen = false">
+						<span class="navbar__link-showcase">
+							<span class="navbar__link-text" data-after="GALLERY">
+								GALLERY
+							</span>
+						</span>
+						
+					</a>
+				</li>
+				<li class="navbar__item">
+					<a href="https://snacksforyoureyes.netlify.app/contact" class="navbar__link" @click="isOpen = false">
+						<span class="navbar__link-showcase">
+							<span class="navbar__link-text" data-after="CONTACT">
+								CONTACT
+							</span>
+						</span>
+						
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</div>
+
+<section id="view" class="hero bg-gray-800">
+ 
+    <div id="" class="main-carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "freeScroll": true, "lazyLoad": 4, "autoPlay": 3000 }'>
+      <!-- slider content start - add more image slides below -->
+  <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-2-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-2-s.webp 380w,
+	    img/events/DogDaze2.0-2-m.webp 1199w,
+	    img/events/DogDaze2.0-2-lg.webp 1680w,
+	    img/events/DogDaze2.0-2-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-5-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-5-s.webp 380w,
+	    img/events/DogDaze2.0-5-m.webp 1199w,
+	    img/events/DogDaze2.0-5-lg.webp 1680w,
+	    img/events/DogDaze2.0-5-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-7-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-7-s.webp 380w,
+	    img/events/DogDaze2.0-7-m.webp 1199w,
+	    img/events/DogDaze2.0-7-lg.webp 1680w,
+	    img/events/DogDaze2.0-7-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-9-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-9-s.webp 380w,
+	    img/events/DogDaze2.0-9-m.webp 1199w,
+	    img/events/DogDaze2.0-9-lg.webp 1680w,
+	    img/events/DogDaze2.0-9-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+	    </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-11-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-11-s.webp 380w,
+	    img/events/DogDaze2.0-11-m.webp 1199w,
+	    img/events/DogDaze2.0-11-lg.webp 1680w,
+	    img/events/DogDaze2.0-11-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-21-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-21-s.webp 380w,
+	    img/events/DogDaze2.0-21-m.webp 1199w,
+	    img/events/DogDaze2.0-21-lg.webp 1680w,
+	    img/events/DogDaze2.0-21-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-25-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-25-s.webp 380w,
+	    img/events/DogDaze2.0-25-m.webp 1199w,
+	    img/events/DogDaze2.0-25-lg.webp 1680w,
+	    img/events/DogDaze2.0-25-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-27-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-27-s.webp 380w,
+	    img/events/DogDaze2.0-27-m.webp 1199w,
+	    img/events/DogDaze2.0-27-lg.webp 1680w,
+	    img/events/DogDaze2.0-27-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-28-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-28-s.webp 380w,
+	    img/events/DogDaze2.0-28-m.webp 1199w,
+	    img/events/DogDaze2.0-28-lg.webp 1680w,
+	    img/events/DogDaze2.0-28-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-29-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-29-s.webp 380w,
+	    img/events/DogDaze2.0-29-m.webp 1199w,
+	    img/events/DogDaze2.0-29-lg.webp 1680w,
+	    img/events/DogDaze2.0-29-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-30-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-30-s.webp 380w,
+	    img/events/DogDaze2.0-30-m.webp 1199w,
+	    img/events/DogDaze2.0-30-lg.webp 1680w,
+	    img/events/DogDaze2.0-30-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-31-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-31-s.webp 380w,
+	    img/events/DogDaze2.0-31-m.webp 1199w,
+	    img/events/DogDaze2.0-31-lg.webp 1680w,
+	    img/events/DogDaze2.0-31-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-40-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-40-s.webp 380w,
+	    img/events/DogDaze2.0-40-m.webp 1199w,
+	    img/events/DogDaze2.0-40-lg.webp 1680w,
+	    img/events/DogDaze2.0-40-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-41-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-41-s.webp 380w,
+	    img/events/DogDaze2.0-41-m.webp 1199w,
+	    img/events/DogDaze2.0-41-lg.webp 1680w,
+	    img/events/DogDaze2.0-41-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-44-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-44-s.webp 380w,
+	    img/events/DogDaze2.0-44-m.webp 1199w,
+	    img/events/DogDaze2.0-44-lg.webp 1680w,
+	    img/events/DogDaze2.0-44-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-47-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-47-s.webp 380w,
+	    img/events/DogDaze2.0-47-m.webp 1199w,
+	    img/events/DogDaze2.0-47-lg.webp 1680w,
+	    img/events/DogDaze2.0-47-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-53-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-53-s.webp 380w,
+	    img/events/DogDaze2.0-53-m.webp 1199w,
+	    img/events/DogDaze2.0-53-lg.webp 1680w,
+	    img/events/DogDaze2.0-53-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-62-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-62-s.webp 380w,
+	    img/events/DogDaze2.0-62-m.webp 1199w,
+	    img/events/DogDaze2.0-62-lg.webp 1680w,
+	    img/events/DogDaze2.0-62-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-63-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-63-s.webp 380w,
+	    img/events/DogDaze2.0-63-m.webp 1199w,
+	    img/events/DogDaze2.0-63-lg.webp 1680w,
+	    img/events/DogDaze2.0-63-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-65-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-65-s.webp 380w,
+	    img/events/DogDaze2.0-65-m.webp 1199w,
+	    img/events/DogDaze2.0-65-lg.webp 1680w,
+	    img/events/DogDaze2.0-65-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-66-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-66-s.webp 380w,
+	    img/events/DogDaze2.0-66-m.webp 1199w,
+	    img/events/DogDaze2.0-66-lg.webp 1680w,
+	    img/events/DogDaze2.0-66-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-72-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-72-s.webp 380w,
+	    img/events/DogDaze2.0-72-m.webp 1199w,
+	    img/events/DogDaze2.0-72-lg.webp 1680w,
+	    img/events/DogDaze2.0-72-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-75-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-75-s.webp 380w,
+	    img/events/DogDaze2.0-75-m.webp 1199w,
+	    img/events/DogDaze2.0-75-lg.webp 1680w,
+	    img/events/DogDaze2.0-75-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-76-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-76-s.webp 380w,
+	    img/events/DogDaze2.0-76-m.webp 1199w,
+	    img/events/DogDaze2.0-76-lg.webp 1680w,
+	    img/events/DogDaze2.0-76-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-78-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-78-s.webp 380w,
+	    img/events/DogDaze2.0-78-m.webp 1199w,
+	    img/events/DogDaze2.0-78-lg.webp 1680w,
+	    img/events/DogDaze2.0-78-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="img/events/DogDaze2.0-79-m.webp"
+  	srcset="
+	    img/events/DogDaze2.0-79-s.webp 380w,
+	    img/events/DogDaze2.0-79-m.webp 1199w,
+	    img/events/DogDaze2.0-79-lg.webp 1680w,
+	    img/events/DogDaze2.0-79-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </div>
+      
+      <!-- slider content end - add more image slides above -->
+    </div>
+	
+</section>
+ <section class="hero">
+      <div class="container">
+	<div class="hero-inner-footer">
+	  <div class="hero-inner-footer-text">
+	    <p>
+	      Gold Coast based professional photographer, Jordan Pavey, here. If you're looking for someone to capture your brand, product or event in a vibrant way, drop me a line. 
+	    </p>
+	  </div>
+	</div>
+      </div>
+      <div class="container"> 
+        <div class="hero-works hero-inner"> 
+	  <div class="hero-inner-footer"> 
+            <div class="hero-inner-footer-text"> 
+              <form name="contact" class="form-container" method="POST" data-netlify="true">
+                <p class="form-element">
+                  <label><input type="text" name="name" placeholder="Your name" /></label>
+                </p>
+                <p class="form-element">
+                  <label><input type="email" name="email" placeholder="Your email" /></label>
+                </p>
+                <p class="form-element">
+                  <label><input type="number" name="phone" placeholder="Your contact number" /></label>
+                </p>
+                <p class="form-element">
+                  <label><textarea name="message" placeholder="What are you thinking I would be a perfect fit to help with?"></textarea></label>
+                </p>
+                <p class="form-element">
+                  <button type="submit">Send</button>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+
+    <!-- Chat Bubble
+    <div class="chat">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 30" id="chat">
+        <path
+          d="M16 26c8.84 0 16-5.82 16-13S24.84 0 16 0 0 5.82 0 13a11.72 11.72 0 004.12 8.71L3.33 30l7.53-4.69A19.11 19.11 0 0016 26z"
+        ></path>
+      </svg>
+    </div> -->
+
+    <!-- Cursor -->
+    <div class="cursor">
+      <div class="cursor-media">
+        <video
+          src="videos/websites.mp4"
+          preload="auto"
+          autoplay
+          muted
+          loop
+          id="websites"
+        ></video>
+        <video
+          src="videos/apps.mp4"
+          preload="auto"
+          autoplay
+          muted
+          loop
+          id="apps"
+        ></video>
+        <video
+          src="videos/branding.mp4"
+          preload="auto"
+          autoplay
+          muted
+          loop
+          id="branding"
+        ></video>
+      </div>
+    </div>
+  </body>
+  <script src="js/index.js"></script>
+
+</html>
