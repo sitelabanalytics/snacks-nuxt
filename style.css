@@ -14,7 +14,8 @@ html, body {
 
 .header {
   width: 100%;
-  background-color: none;
+  background: #fff;
+  position: sticky;
   overflow: hidden;
   max-height: 118px;
 }
@@ -99,7 +100,7 @@ html, body {
   display: block;
   position: absolute;
   transform-origin: left center;
-  color: #ffe7d1;
+  color: #000;
   top: 150%;
   transform: skewY(30deg);
   transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
