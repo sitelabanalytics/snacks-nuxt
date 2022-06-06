@@ -135,6 +135,7 @@
       .hero-inner-footer-text {
         .form-container {
           display: flex;
+          transition: all 0.2s;
           @media (min-width: 768px) {
               flex-direction: row;
           }
@@ -147,14 +148,20 @@
             }
           }
           input { 
-            background-color: black;
+            background-color: #1a202c;
+          }
+          input:focus { 
+            background-color: #23304A;
           }
           textarea {
             min-height: 150px;
             min-width: 300px;
-            background-color: black;
+            background-color: #1a202c;
             font-size: 16pt;
             line-height: 185%;
+          }
+          textarea:focus { 
+            background-color: #23304A;
           }
           button {
             padding: 11px 16px;
@@ -162,6 +169,9 @@
             font-size: 16pt;
             font-weight: 600;
             border-radius: 6px;
+          }
+          button:hover { 
+            background-color: #23304A;
           }
         }
         p {
