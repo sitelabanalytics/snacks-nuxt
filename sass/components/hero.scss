@@ -136,8 +136,11 @@
         .form-container {
           display: flex;
           transition: all 0.2s;
-          @media (min-width: 768px) {
-              flex-direction: row;
+          .form-row {
+            flex-direction: column;
+            @media (min-width: 768px) {
+                flex-direction: row;
+            }
           }
           .form-element {
             margin: 0px 10px;
