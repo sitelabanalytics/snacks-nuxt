@@ -15,12 +15,11 @@
       span {
         font-size: 1rem !important;
         @media (min-width: 768px) {
-              font-size: 1.5rem !important;
+              font-size: 1.8rem !important;
               line-height: 3rem;
-              width: 70%;
           }
           @media (min-width: 1199px) {
-              font-size: 2rem !important;
+              font-size: 3rem !important;
               line-height: 3.5rem;
             }
           @media (min-width: 1440px) {
@@ -30,18 +29,6 @@
       }
       a {
         width: 30%;
-        @media (min-width: 968px) {
-              min-width: 300px;
-          }
-        @media (min-width: 1199px) {
-              min-width: 450px;
-          }
-        @media (min-width: 1440px) {
-              min-width: 600px;
-          }
-        @media (min-width: 1980px) {
-              min-width: 700px;
-          }
       }
     }
     .hero-inner {
@@ -139,6 +126,7 @@
           font-weight: 600;
           transition: all 0.2s;
           .form-row {
+            display: flex;
             flex-direction: column;
             @media (min-width: 768px) {
                 flex-direction: row;
