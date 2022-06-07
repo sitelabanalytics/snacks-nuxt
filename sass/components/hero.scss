@@ -135,6 +135,8 @@
       .hero-inner-footer-text {
         .form-container {
           display: flex;
+          font-size: 21pt;
+          font-weight: 600;
           transition: all 0.2s;
           .form-row {
             flex-direction: column;
@@ -157,20 +159,21 @@
             background-color: #EBEBEB;
           }
           textarea {
-            min-height: 150px;
-            min-width: 300px;
+            min-height: 90px;
+            width: 100%;
             background-color: #f2f2f2;
-            font-size: 16pt;
+            font-size: 18pt;
             line-height: 185%;
           }
           textarea:focus { 
             background-color: #EBEBEB;
           }
           button {
+            min-width: 260px;
             padding: 11px 16px;
             background-color: #f2f2f2;
-            font-size: 16pt;
-            font-weight: 600;
+            font-size: 21pt;
+            font-weight: 800;
             border-radius: 6px;
           }
           button:hover { 
