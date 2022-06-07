@@ -133,22 +133,24 @@
             }
           }
           .form-element {
-            margin: 0px 10px;
+            margin-right: 15px;
             width: 100%;
             @media (min-width: 768px) {
               flex-direction: row;
-              margin: 0px 40px;
+              margin-right: 40px;
             }
           }
           input { 
             background-color: #f2f2f2;
+            padding: 4px 16px;
           }
           input:focus { 
             background-color: #EBEBEB;
           }
           textarea {
             min-height: 90px;
-            width: 100%;
+            padding: 4px 16px;
+            min-width: 260px;
             background-color: #f2f2f2;
             font-size: 18pt;
             line-height: 185%;
