@@ -1,3 +1,3 @@
-# cuberto home cursor using GSAP
+# Snacks for your Eyes Site Repo - GSAP Mouse / Flickity Slider / Tailwind / SCSS
 
-https://cuberto-cursor.netlify.app/
+https://snacksforyoureyes.com/
