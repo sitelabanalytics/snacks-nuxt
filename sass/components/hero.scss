@@ -32,7 +32,7 @@
         width: 140px;
         max-width: 28vw;
           @media (min-width: 1440px) {
-              max-width: 21vw;
+              min-width: 24vw;
           }
       }
     }
@@ -127,6 +127,7 @@
       .hero-inner-footer-text {
         .form-container {
           display: flex;
+          flex-direction: column;
           font-size: 21pt;
           font-weight: 600;
           transition: all 0.2s;
@@ -135,10 +136,12 @@
             flex-direction: column;
             @media (min-width: 768px) {
                 flex-direction: row;
+                margin-bottom: 20px;
             }
           }
           .form-element {
             margin-right: 15px;
+            margin-bottom: 20px;
             width: 100%;
             @media (min-width: 768px) {
               flex-direction: row;
