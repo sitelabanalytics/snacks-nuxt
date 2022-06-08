@@ -53,6 +53,13 @@
           position: relative;
           h1 {
             margin: 0;
+            font-weight: 600;
+            @media (min-width: 1800px) {
+              font-size: 28px;
+            }
+          }
+          h2 {
+            margin: 0;
             font-weight: 400;
             @media (min-width: 1800px) {
               font-size: 28px;
@@ -182,6 +189,7 @@
           font-size: 1.2rem;
           width: 90%;
           line-height: 2.4rem;
+          margin-bottom: 120px;
           @media (min-width: 768px) {
               font-size: 1.5rem;
               line-height: 3rem;
