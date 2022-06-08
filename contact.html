@@ -20,7 +20,7 @@
 	<nav class="navbar flex items-center justify-between flex-wrap py-6 px-4 fixed w-full top-0"
 	x-data="{ isOpen: false }"
 	@keydown.escape="isOpen = false"
-	:class="{ 'shadow-lg bg-indigo-900' : isOpen , 'bg-gray-800' : !isOpen}">
+	:class="{ 'shadow-lg bg-indigo-300' : isOpen , 'bg-gray-200' : !isOpen}">
 		<!--Logo etc-->
 		<div class="flex flex-row items-center flex-shrink-0 text-white mr-6">
 			<a class="text-white no-underline hover:text-white hover:no-underline" href="#">
@@ -65,7 +65,7 @@
         x-show.transition="true">
 			<ul class="navbar__list" class="justify-end">
 				<li class="navbar__item">
-					<a href="/about" class="navbar__link" @click="isOpen = false">
+					<a href="https://snacksforyoureyes.com/contact.html" class="navbar__link" @click="isOpen = false">
 						<span class="navbar__link-showcase">
 							<span class="navbar__link-text" data-after="ABOUT">
 								ABOUT
@@ -73,8 +73,8 @@
 						</span>
 					</a>
 				</li>
-				<!--<li class="navbar__item">
-					<a href="/gallery" class="navbar__link" @click="isOpen = false">
+				<!-- REMOVING GALLERY <li class="navbar__item">
+					<a href="https://snacksforyoureyes.com/gallery.html" class="navbar__link" @click="isOpen = false">
 						<span class="navbar__link-showcase">
 							<span class="navbar__link-text" data-after="GALLERY">
 								GALLERY
@@ -83,17 +83,16 @@
 						
 					</a>
 				</li>-->
-				<button class="inline-block mr-6 px-8 py-4 text-black bg-gray-100 hover:bg-gray-300 rounded-2xl">
-					<li class="navbar__item">
-						<a href="/contact" class="navbar__link" @click="isOpen = false">
-							<span class="navbar__link-showcase">
-								<span class="navbar__link-text" data-after="BOOK">
-									BOOK
-								</span>
+				<li class="navbar__item">
+					<a href="#contactAnchor" class="navbar__link" @click="isOpen = false">
+						<span class="navbar__link-showcase">
+							<span class="navbar__link-text" data-after="CONTACT">
+								CONTACT
 							</span>
-						</a>
-					</li>
-				</button>
+						</span>
+						
+					</a>
+				</li>
 			</ul>
 		</div>
 	</nav>
