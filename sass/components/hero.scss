@@ -9,7 +9,9 @@
     .hero-row {
       margin: 0 0 90px 0 !important;
     }
-    
+    row-end {
+      margin-bottom: 24vh;
+    }
     .hero-works {
       height: auto !important;
       margin: 0 0 180px 0px;
@@ -194,7 +196,7 @@
           font-size: 1.2rem;
           width: 90%;
           line-height: 2.4rem;
-          margin-bottom: 120px;
+          margin-bottom: 24vh;
           @media (min-width: 768px) {
               font-size: 1.5rem;
               line-height: 3rem;
