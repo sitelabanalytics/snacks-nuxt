@@ -6,11 +6,15 @@
               padding: 0 40px;
           }
     }
+    .hero-row {
+      margin: 0 0 60px 0 !important;
+    }
+    
     .hero-works {
       height: auto !important;
-      margin: 180px 0px;
+      margin: 0 0 180px 0px;
         @media (min-width: 1199px) {
-          margin: 240px 0px;
+          margin: 0 0 240px 0px;
         }
       span {
         font-size: 2rem !important;
@@ -53,7 +57,7 @@
           position: relative;
           h1 {
             margin: 0;
-            font-weight: 600;
+            font-weight: 400;
             @media (min-width: 1800px) {
               font-size: 28px;
             }
@@ -61,8 +65,9 @@
           h2 {
             margin: 0;
             font-weight: 400;
+            font-size: 19px;
             @media (min-width: 1800px) {
-              font-size: 28px;
+              font-size: 21px;
             }
           }
         }
