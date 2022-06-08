@@ -6,6 +6,9 @@
               padding: 0 40px;
           }
     }
+    .no-margin {
+      margin: 0 0 40px 0 !important;
+    }
     .hero-mini {
       margin: 0 0 9vh 0 !important;
     }
@@ -145,6 +148,7 @@
         .form-container {
           display: flex;
           flex-direction: column;
+          margin: 40px 0px 60px 0px;
           font-size: 21pt;
           font-weight: 600;
           transition: all 0.2s;
