@@ -168,6 +168,8 @@
           input { 
             background-color: #f2f2f2;
             padding: 4px 16px;
+            width: 100%;
+            font-size: 14pt;
           }
           input:focus { 
             background-color: #EBEBEB;
@@ -177,7 +179,7 @@
             padding: 4px 16px;
             min-width: 100%;
             background-color: #f2f2f2;
-            font-size: 19pt;
+            font-size: 14pt;
             line-height: 165%;
           }
           textarea:focus { 
