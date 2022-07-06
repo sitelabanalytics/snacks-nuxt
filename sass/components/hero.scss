@@ -16,7 +16,7 @@
       margin: 0 0 12vh 0 !important;
     }
     .row-end {
-      margin-bottom: 24vh !important;
+      margin-bottom: 14vh !important;
     }
     .hero-works {
       height: auto !important;
@@ -203,22 +203,23 @@
         }
         p {
           font-size: 1.2rem;
-          width: 90%;
+          width: 94%;
           line-height: 2.4rem;
-          margin-bottom: 24vh;
+          margin-bottom: 14vh;
           @media (min-width: 768px) {
               font-size: 1.5rem;
               line-height: 3rem;
-              width: 80%;
+              width: 90%;
           }
           @media (min-width: 1199px) {
               font-size: 2rem;
               line-height: 3.5rem;
-              width: 70%;
+              width: 80%;
             }
           @media (min-width: 1440px) {
               font-size: 2.2rem;
               line-height: 4rem;
+              width: 70%;
           }
         }
       }
