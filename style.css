@@ -152,26 +152,31 @@ html, body {
 .main-carousel img {
   display: block;
   height: 450px;
+  max-width: 100%;
 }
 @media screen and ( min-width: 768px ) {
   .main-carousel img {
     height: 500px;
+    max-width: 90%;
   }
 }
 @media screen and ( min-width: 1199px ) {
   .main-carousel img {
     height: 550px;
+    max-width: 80%;
   }
 }
 
 .med-carousel img {
   display: block;
   height: 350px;
+  max-width: 100%;
 }
 
 @media screen and ( min-width: 768px ) {
   .med-carousel img {
     height: 250px;
+    max-width: 90%;
   }
 }
 
