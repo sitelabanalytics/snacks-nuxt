@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "parcel index.html gallery.html about.html contact.html",
-    "build": "parcel build index.html gallery.html about.html contact.html thebennies.html mos-clubhouse.html dogdaze.html eatd.html nerve-damage.html unholy-brew.html wednesday.html"
+    "build": "parcel build index.html gallery.html about.html contact.html thebennies.html mos-clubhouse.html dogdaze.html eatd.html nerve-damage.html unholy-brew.html wednesday.html home-v2.html"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
