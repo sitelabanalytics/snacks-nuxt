@@ -12,9 +12,9 @@
 	  <script src="https://cdn.tailwindcss.com"></script>
 	  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
   </head>
-  <body class="loading">
+<body class="flex flex-col h-screen justify-between">
 <!-- Header -->
-<div id="header" class="py-16">
+<div id="header" class="">
 	<nav class="navbar flex items-center justify-between flex-wrap px-4 lg:px-8 fixed w-full top-0"
 	x-data="{ isOpen: false }"
 	@keydown.escape="isOpen = false"
