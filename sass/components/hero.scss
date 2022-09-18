@@ -49,10 +49,13 @@
       }
     }
     .hero-inner {
-      height: 55vh;
+      height: auto;
       display: flex;
       justify-self: center;
       align-items: center;
+      @media (min-width: 768px) {
+        height: 45vh;
+      }
       
       .hero-inner-col {
         &.left {
