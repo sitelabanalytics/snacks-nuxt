@@ -11,7 +11,19 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
-    
+    <style>
+        ul {
+	  width: 100%;
+	}
+	
+        li {
+	  max-width: 100%;
+	  max-height: 75vh;
+	  @media screen and ( min-width: 768px ) {
+	    max-width: 50%;
+	  }
+	}
+    </style>
   </head>
 <body class="flex flex-col h-screen justify-between">
 <!-- Header -->
