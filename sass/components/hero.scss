@@ -50,10 +50,15 @@
     }
     .hero-inner {
       height: auto;
+      margin-bottom: 120px;
       display: flex;
       justify-self: center;
       align-items: center;
       @media (min-width: 768px) {
+        height: 40vh;
+        margin-bottom: none;
+      }
+      @media (min-width: 1199px) {
         height: 45vh;
       }
       
@@ -91,6 +96,11 @@
           z-index: 11;
           position: relative;
           display: flex;
+          flex-direction: column;
+          @media (min-width: 768px) {
+            flex-direction: row;
+          }
+          
           .hero-inner-link-item {
             .hero-inner-link-item-padding {
               position: relative;
