@@ -218,17 +218,19 @@ ul {
 }
 
 	
-li {
+li img {
+  display: block;
+  margin: 0 auto;
   max-width: 100%;
   max-height: 80vh;
 }
 @media screen and ( min-width: 768px ) {
-	li {
+	li img {
 	max-height: 75vh;
 	}
 }
 @media screen and ( min-width: 1199px ) {
-	li {
+	li img {
 	max-height: 65vh;
 	}
 }
