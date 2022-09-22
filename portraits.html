@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snacks for your eyes | Gold Coast Photography</title>
+    <link rel="icon" href="img/favicon.ico" sizes="any"><!-- 32×32 -->
+    <link rel="icon" href="img/snacks-logo-sml.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/android-chrome-192x192.png">
+    <link rel="stylesheet" href="./sass/styles.scss" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
+    
+  </head>
+<body class="flex flex-col h-screen justify-between">
+<!-- Header -->
+<div id="header" class="">
+	<nav class="navbar flex items-center justify-between flex-wrap px-4 lg:px-8 fixed w-full top-0"
+	x-data="{ isOpen: false }"
+	@keydown.escape="isOpen = false"
+	:class="{ 'shadow-lg bg-gray-100' : isOpen , 'bg-gray-200' : !isOpen}">
+		<!--Logo etc-->
+		<div class="flex flex-row items-center flex-shrink-0 text-white mr-6">
+			<a class="text-white no-underline hover:text-white hover:no-underline" href="#"> 
+				<img class="w-12" src="img/snacks-logo-sml.svg" href="https://www.snacksforyoureyes.com/" alt="Snacks For Your Eyes Photography - Jordan Pavey">
+				<div class="navbar__item inline-block py-4">
+					<a href="https://snacksforyoureyes.com/" class="navbar__link" @click="isOpen = false">
+						<span class="navbar__link-showcase">
+							<span class="navbar__link-text mt-1 sm:mt-0 text-sm sm:text-2xl font-extrabold" data-after="HOME">
+								SNACKS FOR YOUR EYES
+							</span>
+						</span>
+					</a>
+				</div>
+			</a>
+		</div>
+	
+	<!-- Hiding entire menu START for V2 update -->
+	<!-- <button
+        @click="isOpen = !isOpen"
+        type="button"
+        class="block lg:hidden px-2 text-gray-800 hover:text-white focus:outline-none focus:text-white"
+        :class="{ 'transition transform-180': isOpen }">
+			<svg
+			class="h-6 w-6 fill-current"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 24 24">
+			<path
+				x-show="!isOpen"
+				fill-rule="evenodd"
+				d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+			</svg>
+      	</button>
+
+		
+		<div class="w-full lg:flex lg:items-center lg:w-auto"
+        :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }"
+        @click.away="isOpen = false"
+        x-show.transition="true">
+			<ul class="navbar__list" class="justify-end">
+				<li class="navbar__item">
+					<a href="https://snacksforyoureyes.com/contact.html" class="navbar__link" @click="isOpen = false">
+						<span class="navbar__link-showcase">
+							<span class="navbar__link-text" data-after="ABOUT">
+								ABOUT
+							</span>
+						</span>
+					</a>
+				</li>
+				 <li class="navbar__item">
+					<a href="https://snacksforyoureyes.com/gallery.html" class="navbar__link" @click="isOpen = false">
+						<span class="navbar__link-showcase">
+							<span class="navbar__link-text" data-after="GALLERY">
+								GALLERY
+							</span>
+						</span>
+						
+					</a>
+				</li>
+				<li class="navbar__item">
+					<a href="#contactAnchor" class="navbar__link" @click="isOpen = false">
+						<span class="navbar__link-showcase">
+							<span class="navbar__link-text" data-after="CONTACT">
+								CONTACT
+							</span>
+						</span>
+						
+					</a>
+				</li>
+			</ul>
+		</div> -->
+		<!-- Hiding entire menu END for V2 update -->
+	</nav>
+</div>
+
+<section class="hero pt-8 flex-auto">
+    <div class="mt-20 px-4 lg:px-8">
+        <div class="hero-inner">
+            <div class="hero-inner-banner">
+                <div class="hero-inner-col left"></div>
+                <div class="hero-inner-col right">
+                    <div class="hero-inner-title">
+                        <h1>Feeding eyes around Australia</h1>
+                    </div>
+                <div class="hero-inner-links">
+                <div data-video-src="bennies" class="hero-inner-link-item">
+                    <div class="hero-inner-link-item-padding"></div>
+                        <a href="/events"><span>Events</span></a>
+                    </div>
+                    <div data-video-src="mortise" class="hero-inner-link-item">
+                        <div class="hero-inner-link-item-padding"></div>
+                        <a href="/products"><span>Products</span></a>
+                    </div>
+                    <div class="hero-inner-link-item" data-video-src="stoodz">
+                        <div class="hero-inner-link-item-padding"></div>
+                        <a href="/portraits"><span class="text-black">Portraits</span></a>
+                    </div>
+		    <div class="hero-inner-link-item" data-video-src="bennies">
+                        <div class="hero-inner-link-item-padding"></div>
+                        <a href="/weddings"><span>Weddings</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero pt-8">
+    <div class="px-4 lg:px-8">
+    <ul>    
+      <li>
+        <img src="img/events/Mo_s-1-lg.webp"
+  	srcset="
+	    img/events/Mo_s-1-s.webp 380w,
+	    img/events/Mo_s-1-m.webp 1199w,
+	    img/events/Mo_s-1-lg.webp 1680w,
+	    img/events/Mo_s-1-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </li>
+      <li>
+        <img src="img/events/Mo_s-2-lg.webp"
+  	srcset="
+	    img/events/Mo_s-2-s.webp 380w,
+	    img/events/Mo_s-2-m.webp 1199w,
+	    img/events/Mo_s-2-lg.webp 1680w,
+	    img/events/Mo_s-2-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </li>
+      <li>
+        <img src="img/events/Mo_s-3-lg.webp"
+  	srcset="
+	    img/events/Mo_s-3-s.webp 380w,
+	    img/events/Mo_s-3-m.webp 1199w,
+	    img/events/Mo_s-3-lg.webp 1680w,
+	    img/events/Mo_s-3-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </li>
+      <li>
+        <img src="img/events/Mo_s-5-lg.webp"
+  	srcset="
+	    img/events/Mo_s-5-s.webp 380w,
+	    img/events/Mo_s-5-m.webp 1199w,
+	    img/events/Mo_s-5-lg.webp 1680w,
+	    img/events/Mo_s-5-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </li>
+      <li>
+        <img src="img/events/Mo_s-12-lg.webp"
+  	srcset="
+	    img/events/Mo_s-12-s.webp 380w,
+	    img/events/Mo_s-12-m.webp 1199w,
+	    img/events/Mo_s-12-lg.webp 1680w,
+	    img/events/Mo_s-12-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </li>
+      <li>
+        <img src="img/events/Mo_s-8-lg.webp"
+  	srcset="
+	    img/events/Mo_s-8-s.webp 380w,
+	    img/events/Mo_s-8-m.webp 1199w,
+	    img/events/Mo_s-8-lg.webp 1680w,
+	    img/events/Mo_s-8-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </li>
+      <li>
+        <img src="img/events/Mo_s-6-lg.webp"
+  	srcset="
+	    img/events/Mo_s-6-s.webp 380w,
+	    img/events/Mo_s-6-m.webp 1199w,
+	    img/events/Mo_s-6-lg.webp 1680w,
+	    img/events/Mo_s-6-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </li>
+      <li>
+        <img src="img/events/Mo_s-10-lg.webp"
+  	srcset="
+	    img/events/Mo_s-10-s.webp 380w,
+	    img/events/Mo_s-10-m.webp 1199w,
+	    img/events/Mo_s-10-lg.webp 1680w,
+	    img/events/Mo_s-10-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </li>
+      <li>
+        <img src="img/events/Mo_s-20-lg.webp"
+  	srcset="
+	    img/events/Mo_s-20-s.webp 380w,
+	    img/events/Mo_s-20-m.webp 1199w,
+	    img/events/Mo_s-20-lg.webp 1680w,
+	    img/events/Mo_s-20-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </li>
+      <li>
+        <img src="img/events/Mo_s-28-lg.webp"
+  	srcset="
+	    img/events/Mo_s-28-s.webp 380w,
+	    img/events/Mo_s-28-m.webp 1199w,
+	    img/events/Mo_s-28-lg.webp 1680w,
+	    img/events/Mo_s-28-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </li>
+      <li>
+        <img src="img/events/Mo_s-31-lg.webp"
+  	srcset="
+	    img/events/Mo_s-31-s.webp 380w,
+	    img/events/Mo_s-31-m.webp 1199w,
+	    img/events/Mo_s-31-lg.webp 1680w,
+	    img/events/Mo_s-31-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </li>
+      <li>
+        <img src="img/events/Mo_s-33-lg.webp"
+  	srcset="
+	    img/events/Mo_s-33-s.webp 380w,
+	    img/events/Mo_s-33-m.webp 1199w,
+	    img/events/Mo_s-33-lg.webp 1680w,
+	    img/events/Mo_s-33-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </li>
+      <li>
+        <img src="img/events/Mo_s-35-lg.webp"
+  	srcset="
+	    img/events/Mo_s-35-s.webp 380w,
+	    img/events/Mo_s-35-m.webp 1199w,
+	    img/events/Mo_s-35-lg.webp 1680w,
+	    img/events/Mo_s-35-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </li>
+      <li>
+        <img src="img/events/Mo_s-37-lg.webp"
+  	srcset="
+	    img/events/Mo_s-37-s.webp 380w,
+	    img/events/Mo_s-37-m.webp 1199w,
+	    img/events/Mo_s-37-lg.webp 1680w,
+	    img/events/Mo_s-37-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </li>
+      <li>
+        <img src="img/events/Mo_s-38-lg.webp"
+  	srcset="
+	    img/events/Mo_s-38-s.webp 380w,
+	    img/events/Mo_s-38-m.webp 1199w,
+	    img/events/Mo_s-38-lg.webp 1680w,
+	    img/events/Mo_s-38-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </li>
+      <li>
+        <img src="img/events/Mo_s-40-lg.webp"
+  	srcset="
+	    img/events/Mo_s-40-s.webp 380w,
+	    img/events/Mo_s-40-m.webp 1199w,
+	    img/events/Mo_s-40-lg.webp 1680w,
+	    img/events/Mo_s-40-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </li>
+      <li>
+        <img src="img/events/Mo_s-43-lg.webp"
+  	srcset="
+	    img/events/Mo_s-43-s.webp 380w,
+	    img/events/Mo_s-43-m.webp 1199w,
+	    img/events/Mo_s-43-lg.webp 1680w,
+	    img/events/Mo_s-43-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </li>
+      <li>
+        <img src="img/events/Mo_s-44-lg.webp"
+  	srcset="
+	    img/events/Mo_s-44-s.webp 380w,
+	    img/events/Mo_s-44-m.webp 1199w,
+	    img/events/Mo_s-44-lg.webp 1680w,
+	    img/events/Mo_s-44-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </li>
+      <li>
+        <img src="img/events/Mo_s-49-lg.webp"
+  	srcset="
+	    img/events/Mo_s-49-s.webp 380w,
+	    img/events/Mo_s-49-m.webp 1199w,
+	    img/events/Mo_s-49-lg.webp 1680w,
+	    img/events/Mo_s-49-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </li>
+      <li>
+        <img src="img/events/Mo_s-53-lg.webp"
+  	srcset="
+	    img/events/Mo_s-53-s.webp 380w,
+	    img/events/Mo_s-53-m.webp 1199w,
+	    img/events/Mo_s-53-lg.webp 1680w,
+	    img/events/Mo_s-53-xl.webp 2480w
+	    "
+  	sizes="70vmin" alt="" />
+      </li>
+    </ul>	    
+    </div>
+</section>	
+	
+<section class="hero pt-8">
+    <div class="px-4 lg:px-8">
+        <div class="hero-inner">
+            <div class="hero-inner-banner">
+	        <div class="hero-inner-footer"> 
+		    <div class="hero-inner-footer-text flex flex-row align-middle">
+		        <div>
+			    <p> Gold Coast based professional photographer, Jordan Pavey. Capturing brands vibrantly and covering events. </p>
+			</div>
+			<div class="mt-8">
+			    <a class="px-14 lg:px-24 py-6 border-2 border-black font-semibold text-xl md:text-3xl" href="/about">About</a>
+			</div>
+		    </div> 
+		</div>
+	    </div>
+	</div>
+    </div>
+<footer> 
+    <div class="bg-gray-100"> 
+        <div class="w-full py-2 px-4 lg:px-8 sm:px-6 text-gray-800 flex flex-col lg:flex-row mx-auto"> 
+            <div> 
+                <div class="pr-4 max-w-sm md:flex-auto my-2 flex-row flex"> 
+                    <a href="https://www.facebook.com/snacksforyoureyes" class="w-10 mr-1"> 
+                        <img src="img/facebook-sqr.svg" class="w-10"> 
+		    </a>  
+		    <a href="https://www.instagram.com/snacksforyoureyes/" class="w-10 mr-1"> 
+			<img src="img/instagram-sqr.svg" class="w-10"> 
+                    </a>
+                    <a href="/#" class="w-10 mr-1"> 
+			<img src="img/linkedin-sqr.svg" class="w-10"> 
+		    </a> 
+		    <a href="/#" class="w-10 mr-1"> 
+                        <img src="img/vero-sqr.svg" class="w-10"> 
+                    </a> 
+                </div> 
+            </div> 
+            <div class="flex items-center"> 
+                <h3 class="leading-7 font-extrabold uppercase text-gray-800">Spring special offer: 2HR live gig coverage or press session from $89 + GST.</h3> 
+            </div> 
+        </div> 
+    </div> 
+</footer>
+    <!-- Chat -->
+<a href="/about#contact">	
+    <div class="chat">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 30" id="chat">
+        <path
+          d="M16 26c8.84 0 16-5.82 16-13S24.84 0 16 0 0 5.82 0 13a11.72 11.72 0 004.12 8.71L3.33 30l7.53-4.69A19.11 19.11 0 0016 26z"
+        ></path>
+      </svg>
+    </div>
+</a>
+
+    <!-- Cursor -->
+    <div class="cursor">
+      <div class="cursor-media">
+      <!-- START COMMENT unused videos from boilerplate    reuse if adding video  
+	<video
+          src="videos/websites.mp4"
+          preload="auto"
+          autoplay
+          muted
+          loop
+          id="websites"
+        ></video>
+        <video
+          src="videos/apps.mp4"
+          preload="auto"
+          autoplay
+          muted
+          loop
+          id="apps"
+        ></video>
+        <video
+          src="videos/branding.mp4"
+          preload="auto"
+          autoplay
+          muted
+          loop
+          id="branding"
+        ></video>
+      END COMMENT unused video -->
+	<img
+          src="img/events/TheBennies-29-m.webp"
+          preload="auto"
+          autoplay
+          muted
+          loop
+          id="bennies"
+        ></img>
+	<img
+          src="img/events/DogDaze2.0-25-m.webp"
+          preload="auto"
+          autoplay
+          muted
+          loop
+          id="dogz"
+        ></img>
+	<img
+          src="img/events/NerveDamage-10-m.webp"
+          preload="auto"
+          autoplay
+          muted
+          loop
+          id="nerved"
+        ></img>
+	<img
+          src="img/events/UnholyBrew-14-m.webp"
+          preload="auto"
+          autoplay
+          muted
+          loop
+          id="unholy"
+        ></img>
+	<img
+          src="img/events/Mo_s-31-m.webp"
+          preload="auto"
+          autoplay
+          muted
+          loop
+          id="moe"
+        ></img>
+	<img
+          src="img/events/EATD-8-m.webp"
+          preload="auto"
+          autoplay
+          muted
+          loop
+          id="eatd"
+        ></img>
+	<img
+          src="img/products/mortise-and-talent-m.webp"
+          preload="auto"
+          autoplay
+          muted
+          loop
+          id="mortise"
+        ></img>
+	<img
+          src="img/portraits/Studio-3-m.webp"
+          preload="auto"
+          autoplay
+          muted
+          loop
+          id="stoodz"
+        ></img>
+	<img
+          src="img/portraits/Avalanche-13-m.webp"
+          preload="auto"
+          autoplay
+          muted
+          loop
+          id="avi"
+        ></img>
+      </div>
+    </div>
+  </body>
+  <script src="js/index.js"></script>
+</html>
